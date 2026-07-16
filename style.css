@@ -432,61 +432,62 @@ footer {
 }
 
 
-/* --- Mobile Responsive Header Fix (One Single Line Layout) --- */
+/* --- Ultra-Clean Mobile Responsive Header Fix --- */
 @media (max-width: 600px) {
     header {
         display: flex !important;
-        flex-direction: row !important; /* Forces Logo and Nav to stay side-by-side */
+        flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
-        padding: 15px 4% !important; /* Thoda tight padding taake links ko jagah mile */
+        padding: 12px 15px !important;
         width: 100% !important;
-        background: rgba(255, 255, 255, 0.95) !important; /* White background clear readibility ke liye */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        background: rgba(255, 255, 255, 0.98) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+        box-sizing: border-box !important;
     }
 
-    /* Logo scaling down on mobile to save space */
+    /* Logo stays fixed on the left and never squeezes */
     .logo {
-        font-size: 1.25rem !important;
-        white-space: nowrap !important; /* Taake logo kabhi toot kar do lines me na jaye */
+        font-size: 1.15rem !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        margin-right: 15px !important;
     }
 
-    /* Navigation links container inline list */
+    /* Links container is now beautifully swipeable/scrollable */
     nav {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
-        gap: 10px !important; /* Perfect tight gap taake screen se baahar na jayein */
+        gap: 14px !important;
+        overflow-x: auto !important; /* Enables horizontal swipe */
+        white-space: nowrap !important; /* Stops links from breaking into lines */
+        -webkit-overflow-scrolling: touch !important; /* Smooth swipe on iPhone */
+        padding: 5px 2px !important;
+        flex-grow: 1 !important;
+        justify-content: flex-start !important;
     }
 
-    nav a {
-        margin: 0 !important; /* Purane margin remove kiye */
-        font-size: 0.78rem !important; /* Dynamic sizing for small screens */
-        font-weight: 600 !important;
-        white-space: nowrap !important; /* Kisi link ka text break nahi hoga */
-        padding: 4px 6px !important;
-    }
-
-    /* Connect CTA link styling for clean mobile look */
-    nav .btn-connect, nav .nav-cta {
-        border-bottom: 1.5px solid var(--text-color) !important;
-        padding-bottom: 1px !important;
-        font-weight: 700 !important;
-    }
-}
-
-/* Extra small screens protection (e.g., iPhone SE) */
-@media (max-width: 380px) {
-    header {
-        padding: 12px 3% !important;
-    }
-    .logo {
-        font-size: 1.15rem !important;
+    /* Hide ugly scrollbars while keeping the swipe feature active */
+    nav::-webkit-scrollbar {
+        display: none !important; /* Chrome, Safari, Opera */
     }
     nav {
-        gap: 6px !important;
+        -ms-overflow-style: none !important;  /* IE and Edge */
+        scrollbar-width: none !important;  /* Firefox */
     }
+
+    /* Individual Nav Links */
     nav a {
-        font-size: 0.72rem !important;
+        font-size: 0.82rem !important;
+        font-weight: 600 !important;
+        padding: 4px 2px !important;
+        flex-shrink: 0 !important; /* Prevents text from squeezing */
+    }
+
+    /* Connect link styling */
+    nav .btn-connect, nav .nav-cta {
+        border-bottom: 2px solid #4361ee !important;
+        font-weight: 700 !important;
     }
 }
