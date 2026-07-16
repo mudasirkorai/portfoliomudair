@@ -430,3 +430,63 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* --- Mobile Responsive Header Fix (One Single Line Layout) --- */
+@media (max-width: 600px) {
+    header {
+        display: flex !important;
+        flex-direction: row !important; /* Forces Logo and Nav to stay side-by-side */
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 15px 4% !important; /* Thoda tight padding taake links ko jagah mile */
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.95) !important; /* White background clear readibility ke liye */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Logo scaling down on mobile to save space */
+    .logo {
+        font-size: 1.25rem !important;
+        white-space: nowrap !important; /* Taake logo kabhi toot kar do lines me na jaye */
+    }
+
+    /* Navigation links container inline list */
+    nav {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important; /* Perfect tight gap taake screen se baahar na jayein */
+    }
+
+    nav a {
+        margin: 0 !important; /* Purane margin remove kiye */
+        font-size: 0.78rem !important; /* Dynamic sizing for small screens */
+        font-weight: 600 !important;
+        white-space: nowrap !important; /* Kisi link ka text break nahi hoga */
+        padding: 4px 6px !important;
+    }
+
+    /* Connect CTA link styling for clean mobile look */
+    nav .btn-connect, nav .nav-cta {
+        border-bottom: 1.5px solid var(--text-color) !important;
+        padding-bottom: 1px !important;
+        font-weight: 700 !important;
+    }
+}
+
+/* Extra small screens protection (e.g., iPhone SE) */
+@media (max-width: 380px) {
+    header {
+        padding: 12px 3% !important;
+    }
+    .logo {
+        font-size: 1.15rem !important;
+    }
+    nav {
+        gap: 6px !important;
+    }
+    nav a {
+        font-size: 0.72rem !important;
+    }
+}
