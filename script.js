@@ -1,48 +1,97 @@
-// JavaScript logic to inject dynamic glowing pastel/vibrant colors on Skill Cards mouse hover
-document.addEventListener('DOMContentLoaded', () => {
-    const skillCards = document.querySelectorAll('.skill-card');
-    
-    // Aesthetic professional color array for frontend grid look
-    const developerColors = [
-        '#3b82f6', // Bright Blue
-        '#a855f7', // Electric Purple
-        '#ec4899', // Magenta Pink
-        '#f97316', // Neon Orange
-        '#14b8a6', // Clean Teal
-        '#6366f1'  // Indigo Tint
-    ];
+document.addEventListener("DOMContentLoaded", () => {
 
-    skillCards.forEach((card, index) => {
-        const designatedColor = developerColors[index % developerColors.length];
+    // =========================
+    // MOBILE NAVBAR
+    // =========================
 
-        // Activate background fill color when mouse moves over the boundary
-        card.addEventListener('mouseenter', () => {
-            card.classList.add('hovered');
-            card.style.backgroundColor = designatedColor;
-            card.style.borderColor = designatedColor;
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    if (hamburger && navLinks) {
+
+        // Open / close mobile menu
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+            hamburger.classList.toggle("active");
         });
 
-        // Gently discharge back to original pristine white state on mouse exit
-        card.addEventListener('mouseleave', () => {
-            card.classList.remove('hovered');
-            card.style.backgroundColor = ''; 
-            card.style.borderColor = '';
+        // Close menu when a link is clicked
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("show");
+                hamburger.classList.remove("active");
+            });
         });
+
+    }
+
+
+    // =========================
+    // ACTIVE NAVIGATION
+    // =========================
+
+    const sections = document.querySelectorAll("section[id]");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+
+        let currentSection = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 150;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionTop + sectionHeight
+            ) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        navItems.forEach(link => {
+            link.classList.remove("active");
+
+            const linkTarget = link.getAttribute("href");
+
+            if (linkTarget === `#${currentSection}`) {
+                link.classList.add("active");
+            }
+        });
+
     });
-});
-// JavaScript
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('active');
-});
 
-// Close menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('active');
-  });
+    // =========================
+    // CLOSE MENU WHEN CLICKING OUTSIDE
+    // =========================
+
+    document.addEventListener("click", (event) => {
+
+        if (
+            navLinks &&
+            hamburger &&
+            !navLinks.contains(event.target) &&
+            !hamburger.contains(event.target)
+        ) {
+            navLinks.classList.remove("show");
+            hamburger.classList.remove("active");
+        }
+
+    });
+
+
+    // =========================
+    // ESC KEY CLOSE MENU
+    // =========================
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape" && navLinks && hamburger) {
+            navLinks.classList.remove("show");
+            hamburger.classList.remove("active");
+        }
+
+    });
+
 });
