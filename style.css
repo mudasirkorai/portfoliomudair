@@ -693,3 +693,173 @@ footer {
         height: 48px;
     }
 }
+
+/* ============================================================
+   VIDEO EDITING SECTION (UPDATED FOR ALL TYPES OF EDITING)
+   ============================================================ */
+.video-editing-section {
+  padding: 5rem 0;
+  background-color: #fcfbf9;
+}
+
+.video-editing-section .container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-header .section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.ve-block {
+  margin-bottom: 3rem;
+}
+
+.ve-block:last-child {
+  margin-bottom: 0;
+}
+
+.subsection-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subsection-title svg {
+  stroke: #1f2937;
+}
+
+.video-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* Tools Grid: 3 Columns */
+.tools-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Capabilities Grid: 3 Columns x 2 Rows */
+.expertise-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card Styling */
+.ve-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ve-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.ve-card-top {
+  margin-bottom: 0.75rem;
+}
+
+.ve-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-primary {
+  color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.badge-secondary {
+  color: #7c3aed;
+  background-color: #f5f3ff;
+}
+
+.badge-accent {
+  color: #059669;
+  background-color: #ecfdf5;
+}
+
+.ve-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.ve-card p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.55;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 900px) {
+  .tools-grid,
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tools-grid,
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Capabilities Grid: 4 Columns x 2 Rows */
+.expertise-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Tablet alignment */
+@media (max-width: 992px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile alignment */
+@media (max-width: 600px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}
