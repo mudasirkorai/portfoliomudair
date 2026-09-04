@@ -1,97 +1,56 @@
-document.addEventListener("DOMContentLoaded", () => {
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = themeToggle.querySelector("i");
 
-    // =========================
-    // MOBILE NAVBAR
-    // =========================
 
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
 
-    if (hamburger && navLinks) {
+if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
 
-        // Open / close mobile menu
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-            hamburger.classList.toggle("active");
-        });
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+}
 
-        // Close menu when a link is clicked
-        document.querySelectorAll(".nav-links a").forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("show");
-                hamburger.classList.remove("active");
-            });
-        });
+
+// Theme Toggle
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+
+        localStorage.setItem("theme", "dark");
+
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+
+    } else {
+
+        localStorage.setItem("theme", "light");
+
+        themeIcon.classList.remove("fa-sun");
+        themeIcon.classList.add("fa-moon");
 
     }
 
-
-    // =========================
-    // ACTIVE NAVIGATION
-    // =========================
-
-    const sections = document.querySelectorAll("section[id]");
-    const navItems = document.querySelectorAll(".nav-links a");
-
-    window.addEventListener("scroll", () => {
-
-        let currentSection = "";
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150;
-            const sectionHeight = section.offsetHeight;
-
-            if (
-                window.scrollY >= sectionTop &&
-                window.scrollY < sectionTop + sectionHeight
-            ) {
-                currentSection = section.getAttribute("id");
-            }
-        });
-
-        navItems.forEach(link => {
-            link.classList.remove("active");
-
-            const linkTarget = link.getAttribute("href");
-
-            if (linkTarget === `#${currentSection}`) {
-                link.classList.add("active");
-            }
-        });
-
-    });
+});
 
 
-    // =========================
-    // CLOSE MENU WHEN CLICKING OUTSIDE
-    // =========================
+// Mobile Navigation
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
-    document.addEventListener("click", (event) => {
-
-        if (
-            navLinks &&
-            hamburger &&
-            !navLinks.contains(event.target) &&
-            !hamburger.contains(event.target)
-        ) {
-            navLinks.classList.remove("show");
-            hamburger.classList.remove("active");
-        }
-
-    });
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
 
 
-    // =========================
-    // ESC KEY CLOSE MENU
-    // =========================
+// Close menu after clicking a link
+document.querySelectorAll(".nav-links a").forEach(link => {
 
-    document.addEventListener("keydown", (event) => {
-
-        if (event.key === "Escape" && navLinks && hamburger) {
-            navLinks.classList.remove("show");
-            hamburger.classList.remove("active");
-        }
-
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
     });
 
 });

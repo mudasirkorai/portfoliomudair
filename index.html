@@ -3,287 +3,490 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Developer Portfolio</title>
+
+    <title>M. Mudasir | Frontend Developer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.png" />
+
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome Icons Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- HTML -->
-<header class="navbar">
-  <div class="nav-container">
-    <a href="#" class="logo">M. Mudasir</a>
-    
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" class="active">Home</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
 
-    <div class="nav-actions">
-      <a href="#contact" class="btn-connect">Connect</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
+            <a href="#home" class="logo">
+                M<span>M</span>
+            </a>
 
-    <!-- Home Section (Big Center Photo) -->
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <a href="#contact" class="btn-connect">Connect</a>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
     <section id="home" class="hero-section">
+
         <div class="hero-content">
-            
-            <!-- 💡 CHANGE NAME HERE: Replace 'Your Name' with your actual name -->
-            <h1>Hi, I'm M.Mudasir</h1>
-                 <p  class="hero-desc"> A passionate Frontend Developer & Creative Designer specializing in clean code, visual graphics, video editing, and pixel-perfect responsive layouts.</p>
+
+            <p class="hero-small">Hello, I'm</p>
+
+            <h1>Muhammad <span>Mudasir</span></h1>
+
+            <h2>Frontend Developer</h2>
+
+            <p class="hero-desc">
+                I'm a professional Frontend Developer with expertise in building modern,
+                responsive, interactive, and high-quality websites. I can work with a
+                wide range of frontend technologies and handle everything from clean
+                layouts and responsive designs to smooth functionality and modern user
+                interfaces. My focus is on creating professional-level websites that
+                provide a seamless and engaging experience across all devices.
+            </p>
 
             
-            <!-- Big Size Photo Container -->
-            <div class="big-photo-container">
-                <!-- 💡 IMAGE: Put your own image URL or local file path here -->
-                <img src="profile.png" alt="Developer Workspace" class="center-photo">
+
+
+            <div class="tech-icons">
+
+                <div><i class="fab fa-html5"></i></div>
+                <div><i class="fab fa-css3-alt"></i></div>
+                <div><i class="fab fa-js"></i></div>
+                <div><i class="fab fa-react"></i></div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Skills Section with Mouse Hover Color Effect -->
+
+    <!-- SKILLS SECTION -->
     <section id="skills" class="skills-section">
-        <h2>Technical Expertise</h2>
-        <p class="section-subtitle">Hover over the core skills below to explore my technical stacks.</p>
+
+        <div class="section-heading">
+
+            <span class="section-tag">My Expertise</span>
+
+            <h2>Technical <span>Skills</span></h2>
+
+            <p>
+                A strong collection of frontend technologies, frameworks,
+                tools, and modern web development skills.
+            </p>
+
+        </div>
+
+
         <div class="skills-grid">
+
+
+            <!-- CORE FRONTEND -->
             <div class="skill-card">
-                <h3>HTML5 & CSS3</h3>
-                <p>Writing semantic code, layouts using Flexbox/Grid, and building customized structural components.</p>
+
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+
+                <h3>Core Frontend</h3>
+
+                <ul class="skill-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Responsive Web Design</li>
+                    <li>Flexbox</li>
+                    <li>CSS Grid</li>
+                    <li>DOM Manipulation</li>
+                </ul>
+
             </div>
+
+
+            <!-- FRAMEWORKS -->
             <div class="skill-card">
-                <h3>JavaScript (ES6+)</h3>
-                <p>Developing functional logic, asynchronous operations, DOM manipulations, and clean code dynamic interactions.</p>
+
+                <div class="skill-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+
+                <h3>Frameworks & Libraries</h3>
+
+                <ul class="skill-list">
+                    <li>React.js</li>
+                    <li>Next.js</li>
+                    <li>Bootstrap</li>
+                    <li>Tailwind CSS</li>
+                </ul>
+
             </div>
+
+
+            <!-- DEVELOPMENT TOOLS -->
             <div class="skill-card">
-                <h3>React.js Framework</h3>
-                <p>Building scalable web apps using modular reusable components, custom hooks, and state management systems.</p>
+
+                <div class="skill-icon">
+                    <i class="fas fa-screwdriver-wrench"></i>
+                </div>
+
+                <h3>Development Tools</h3>
+
+                <ul class="skill-list">
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>npm</li>
+                    <li>Vite</li>
+                </ul>
+
             </div>
+
+
+            <!-- WEB DEVELOPMENT -->
             <div class="skill-card">
-                <h3>Responsive Design</h3>
-                <p>Adopting mobile-first responsive architecture ensuring fluidity across all breakpoints and smartphone screen ratios.</p>
+
+                <div class="skill-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+
+                <h3>Web Development</h3>
+
+                <ul class="skill-list">
+                    <li>API Integration</li>
+                    <li>JSON</li>
+                    <li>UI / UX</li>
+                    <li>Web Performance</li>
+                    <li>Cross-Browser Compatibility</li>
+                </ul>
+
             </div>
-            <div class="skill-card">
-                <h3>Git & Version Control</h3>
-                <p>Managing codebase versions efficiently using GitHub, branching deployments, and resolving codebase integrity.</p>
-            </div>
-            <div class="skill-card">
-                <h3>UI/UX Optimization</h3>
-                <p>Enhancing browser rendering performance, micro-interactions, SEO configurations, and asset compression.</p>
-            </div>
-            <div class="skill-card">
-                <h3>Video Editing</h3>
-                <p>Crafting engaging visual content, smooth transitions, color grading, and dynamic cuts for modern digital platforms and visual storytelling.</p>
-            </div>
-            <div class="skill-card">
-                <h3>Graphic Designing</h3>
-                <p>Designing modern visual assets, social media branding, custom banners, and UI graphics with a focus on visual hierarchy and color harmony.</p>
-            </div>
+
+
         </div>
+
     </section>
 
 
-
-    <!-- Education & Certifications Section -->
-    <section id="education" class="education-section">
-        <h2>My Education & Credentials</h2>
-        <p class="section-subtitle">A timeline of my academic foundation, specialized training, and current journey.</p>
-        
-        <div class="education-grid">
-            <!-- Card 1: PITB & Sukkur IBA Web Dev Course (New Addition) -->
-            <div class="education-card training-card">
-                <div class="edu-badge"><i class="fas fa-laptop-code"></i></div>
-                <span class="edu-duration">Professional Course</span>
-                <h3>Web Development Certification</h3>
-                <p class="edu-institute">PITP (At Quaid-e-Awam University - QUEST)</p>
-                <p class="edu-desc">Successfully completed an intensive web development course, mastering core coding principles, responsive design structures, and modern frontend technologies to build production-ready applications.</p>
-            </div>
-
-            <!-- Card 2: Current Status (Admission Prep - "USAT" completely removed) -->
-            <div class="education-card current-card">
-                <div class="edu-badge"><i class="fas fa-university"></i></div>
-                <span class="edu-duration">Current Phase</span>
-                <h3>University Admission Prep</h3>
-                <p class="edu-institute">Targeting Bachelor of Science in Computer Science (BSCS)</p>
-                <p class="edu-desc">Actively preparing for engineering and academic entrance tests, strengthening my mathematics, logic, and analytical problem-solving skills to secure a computer science admission.</p>
-            </div>
-
-            <!-- Card 3: Intermediate (Completed) -->
-            <div class="education-card">
-                <div class="edu-badge"><i class="fas fa-graduation-cap"></i></div>
-                <span class="edu-duration">Completed</span>
-                <h3>Intermediate (HSC)</h3>
-                <p class="edu-institute">Higher Secondary Education</p>
-                <p class="edu-desc">Completed intermediate studies, building a strong logical foundation in analytical subjects, mathematics, and science, which is highly essential for computer science problem-solving.</p>
-            </div>
-
-            <!-- Card 4: Matriculation (Completed) -->
-            <div class="education-card">
-                <div class="edu-badge"><i class="fas fa-school"></i></div>
-                <span class="edu-duration">Completed</span>
-                <h3>Matriculation (SSC)</h3>
-                <p class="edu-institute">Secondary School Education</p>
-                <p class="edu-desc">Achieved Secondary School Certificate with science subjects, initiating my initial interest in technologies, algorithms, and computers.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4 Custom Projects Section -->
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="projects-section">
-        <h2>Featured Projects</h2>
-        <p class="section-subtitle">A collection of applications engineered for optimal visual impact and utility.</p>
-        
-        <div class="projects-grid">
-            <!-- Project 1: Omni Hub -->
-            <div class="project-card">
-                <div class="project-img-holder">
-                    <!-- 💡 IMAGE: Put your Omni Hub project screenshot link here -->
-                    <img src="images.jpg" alt="Omni Hub Platform">
-                </div>
-                <div class="project-info">
-                    <h3>Omni Hub</h3>
-                    <p>A multi-functional central dashboard integrating 4 distinct specialized utilities. Built with an intuitive navigation system, modular structure, and fluid state management to keep all features running independently under one clean interface.</p>
 
-                    <a href="https://omnihub-psi.vercel.app/" target="_blank" class="project-link-btn">
-                        live demo <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="section-heading">
 
-            <!-- Project 2: Women's Online Store -->
-            <div class="project-card">
-                <div class="project-img-holder">
-                    <!-- 💡 IMAGE: Put your E-commerce project screenshot link here -->
-                    <img src="istockphoto-865393164-612x612.jpg" alt="Women's Online Store">
-                </div>
-                <div class="project-info">
-                    <h3>E-Commerce Women's Store</h3>
-                    <p>A premium retail shopping interface showcasing women's apparel, cosmetics, and accessories. Features high-performance grid filtering, responsive layout design for mobile devices, interactive product cards, and optimized image rendering.</p>
+            <span class="section-tag">My Work</span>
 
-                      <a href="https://kk-closet.vercel.app/" target="_blank" class="project-link-btn">
-                        live demo <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
+            <h2>Featured <span>Projects</span></h2>
 
-            <!-- Project 3: Frontend Encyclopedia -->
-            <div class="project-card">
-                <div class="project-img-holder">
-                    <!-- 💡 IMAGE: Put your Educational Platform project screenshot link here -->
-                    <img src="images (1).jpg" alt="Frontend Encyclopedia">
-                </div>
-                <div class="project-info">
-                    <h3>Frontend Encyclopedia</h3>
-                    <p>A comprehensive 30-chapter interactive learning index dedicated to HTML5, CSS3, and JavaScript core logic. Includes clean layouts, embedded code snippets container layouts, responsive structured chapters, and active dark/light mode toggle elements.</p>
-                
-                      <a href="https://coursebymudasir.vercel.app/" target="_blank" class="project-link-btn">
-                        live demo <i class="fas fa-external-link-alt"></i>
-                    </a>
-                
-                </div>
-            </div>
+            <p>
+                A collection of projects built with modern design,
+                responsive layouts, and interactive functionality.
+            </p>
 
-            <!-- Project 4: Enterprise Platform -->
-            <div class="project-card">
-                <div class="project-img-holder">
-                    <!-- 💡 IMAGE: Put your Enterprise web app project screenshot link here -->
-                    <img src="Enterprise-Business-Intelligence-Platforms_Featured-Image.webp" alt="Enterprise Platform Practice">
-                </div>
-                <div class="project-info">
-                    <h3>Enterprise Platform Sandbox</h3>
-                    <p>A rigorous architecture practice project consisting of 12 distinct multi-tier web pages. Built to test complex routing, nested grid layouts, heavy-content distribution, forms, and absolute responsive layout stability across a massive structure.</p>
-               
-                      <a href="https://platfom.vercel.app/" target="_blank" class="project-link-btn">
-                        live demo <i class="fas fa-external-link-alt"></i>
-                      </a>
-                </div>
-            </div>
-            <!-- Project 5: Real Estate & Bikes Broker Platform -->
-            <div class="project-card">
-                <div class="project-img-holder">
-                    <!-- Image: Real Estate & Bikes Concept -->
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600" alt="Real Estate and Bikes Brokerage">
-                </div>
-                <div class="project-info">
-                    <h3>Multi-Asset Brokerage Platform</h3>
-                    <p>A dual-purpose utility web application custom-built for a local broker. It seamlessly handles listings for residential properties (Rent, Sell, Purchase) and a dynamic marketplace for buying and selling motorbikes. Integrated with direct-to-broker call/WhatsApp actions to streamline physical deals instantly.</p>
-                    
-                    <!-- 💡 LINK: Yahan is website ka live link lagayein -->
-                    <a href="https://sain-saleem.vercel.app/" target="_blank" class="project-link-btn">
-                        Live Demo <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Project 6: USAT Pakistan Preparation Portal -->
-            <div class="project-card">
-                <div class="project-img-holder">
-                    <!-- Image: Test Preparation / Education Concept -->
-                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600" alt="USAT Pakistan Prep Portal">
-                </div>
-                <div class="project-info">
-                    <h3>USAT Pakistan Prep Portal</h3>
-                    <p>An interactive educational platform engineered for students preparing for the Under-Graduate Studies Admission Test (USAT) in Pakistan. Features modular practice tests, chapter-wise study materials, and structured syllabus guides to optimize candidate success rates.</p>
-                    
-                    <!-- 💡 LINK: Yahan is educational website ka live link lagayein -->
-                    <a href="https://usat-six.vercel.app/" target="_blank" class="project-link-btn">
-                        Live Demo <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
         </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- OMNI HUB -->
+            <div class="project-card">
+
+                <div class="project-image omni-project">
+    <i class="fas fa-th-large"></i>
+</div>
+
+                <div class="project-info">
+
+                    <span class="project-number">01</span>
+
+                    <h3>Omni Hub</h3>
+
+                    <p>
+                        A multi-functional central dashboard integrating multiple
+                        useful tools into one clean and modern platform with an
+                        intuitive interface and responsive design.
+                    </p>
+
+                   
+                    <a href="https://omnihub-psi.vercel.app/"
+                       target="_blank"
+                       class="project-link-btn">
+
+                        Live Demo
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRONTEND ENCYCLOPEDIA -->
+            <div class="project-card">
+
+                <div class="project-image encyclopedia-project">
+    <i class="fas fa-book-open"></i>
+</div>
+
+                <div class="project-info">
+
+                    
+
+                    <h3>Frontend Encyclopedia</h3>
+
+                    <p>
+                        A comprehensive interactive learning platform focused on
+                        frontend development concepts, structured lessons, clean
+                        layouts, and responsive learning experiences.
+                    </p>
+
+                  
+
+                    <a href="https://coursebymudasir.vercel.app/"
+                       target="_blank"
+                       class="project-link-btn">
+
+                        Live Demo
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- USAT -->
+            <div class="project-card">
+
+                <div class="project-image project-placeholder">
+
+                    <i class="fas fa-graduation-cap"></i>
+
+                </div>
+
+                <div class="project-info">
+
+                    <span class="project-number">03</span>
+
+                    <h3>USAT Pakistan Prep Portal</h3>
+
+                    <p>
+                        An interactive educational platform designed for students
+                        preparing for the USAT examination with structured
+                        learning materials and practice resources.
+                    </p>
+
+                   
+
+                    <a href="https://usat-six.vercel.app/"
+                       target="_blank"
+                       class="project-link-btn">
+
+                        Live Demo
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- GYM -->
+            <div class="project-card">
+
+                <div class="project-image gym-project">
+
+                    <i class="fas fa-dumbbell"></i>
+
+                </div>
+
+                <div class="project-info">
+
+                    <span class="project-number">04</span>
+
+                    <h3>Gym Website</h3>
+
+                    <p>
+                        A modern and responsive gym website designed to showcase
+                        fitness services, training programs, membership plans,
+                        and a professional user experience.
+                    </p>
+
+                  
+
+                    <a href="https://gym-peach-sigma.vercel.app/" class="project-link-btn">
+
+                        View Project
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRAVEL -->
+            <div class="project-card">
+
+                <div class="project-image travel-project">
+
+                    <i class="fas fa-plane"></i>
+
+                </div>
+
+                <div class="project-info">
+
+                    <span class="project-number">05</span>
+
+                    <h3>Travel Agency</h3>
+
+                    <p>
+                        A modern and responsive travel agency website designed
+                        to showcase destinations, travel packages, booking
+                        information, and engaging travel experiences.
+                    </p>
+
+                   
+
+                    <a href="https://skyvoyage-travel-agency.netlify.app/" class="project-link-btn">
+
+                        View Project
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUOTE GENERATOR -->
+            <div class="project-card">
+
+                <div class="project-image quote-project">
+
+                    <i class="fas fa-quote-right"></i>
+
+                </div>
+
+                <div class="project-info">
+
+                    <span class="project-number">06</span>
+
+                    <h3>Quote Generator</h3>
+
+                    <p>
+                        An interactive quote generator that displays inspiring
+                        and dynamic quotes through a clean, modern, and
+                        user-friendly interface.
+                    </p>
+
+                   
+
+                    <a href="https://mudasir-quotes.netlify.app/" class="project-link-btn">
+
+                        View Project
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
     </section>
 
-    <!-- Contact Section (With Logos for WhatsApp, Insta, GitHub, LinkedIn, Email) -->
+
+    <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section">
-        <h2>Let's Connect</h2>
-        <p>I'm always looking for opportunities to build together. Choose your preferred digital workspace below to reach out:</p>
-        
+
+        <div class="section-heading">
+
+            <span class="section-tag">Get In Touch</span>
+
+            <h2>Let's <span>Connect</span></h2>
+
+            <p>
+                Have a project or opportunity? Feel free to connect with me.
+            </p>
+
+        </div>
+
+
         <div class="social-links-container">
-            <!-- 💡 LINKS: Replace the dummy links below with your actual links and info -->
-            
-            <!-- WhatsApp -->
-            <a href="https://wa.me/923241382952" target="_blank" class="social-icon-btn whatsapp" title="Chat on WhatsApp">
+
+            <a href="https://wa.me/923241382952"
+               target="_blank"
+               class="social-icon-btn">
                 <i class="fab fa-whatsapp"></i>
             </a>
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/mhd-mudasir-1bb622387" target="_blank" class="social-icon-btn linkedin" title="Connect on LinkedIn">
+            <a href="https://www.linkedin.com/in/mhd-mudasir-1bb622387"
+               target="_blank"
+               class="social-icon-btn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
 
-            <!-- GitHub -->
-            <a href="https://github.com/mudasirkorai" target="_blank" class="social-icon-btn github" title="Follow on GitHub">
+            <a href="https://github.com/mudasirkorai"
+               target="_blank"
+               class="social-icon-btn">
                 <i class="fab fa-github"></i>
             </a>
 
-            <!-- Instagram -->
-            <a href="https://instagram.com/korai.65" target="_blank" class="social-icon-btn instagram" title="Follow on Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+            
 
-            <!-- Email -->
-            <a href="mailto:halarkorai4@gmail.com" class="social-icon-btn email" title="Send an Email">
+            <a href="mailto:halarkorai4@gmail.com"
+               class="social-icon-btn">
                 <i class="fas fa-envelope"></i>
             </a>
+
         </div>
+
     </section>
 
-    <!-- Footer -->
+
+    <!-- FOOTER -->
     <footer>
-        <!-- 💡 FOOTER NAME: Put your name here -->
-        <p>&copy; 2026 M.Mudasir . All Rights Reserved.</p>
+
+        <p>
+            © 2026 <span>Muhammad Mudasir</span>. All Rights Reserved.
+        </p>
+
     </footer>
 
+
     <script src="script.js"></script>
+
 </body>
 </html>
