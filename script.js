@@ -44,6 +44,7 @@ const navLinks = document.getElementById("navLinks");
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
+ 
 
 
 // Close menu after clicking a link
